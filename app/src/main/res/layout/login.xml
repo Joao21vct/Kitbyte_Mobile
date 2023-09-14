@@ -7,7 +7,7 @@
     android:background="#ffffff"
     android:backgroundTint="#D9D9D9"
     android:orientation="vertical"
-    tools:context=".MainActivity2">
+    tools:context=".Login">
 
     <LinearLayout
         android:layout_width="match_parent"

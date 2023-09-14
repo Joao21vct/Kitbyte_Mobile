@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-public class MainActivity extends AppCompatActivity {
+public class Loading extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.loading);
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable(){
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         }, 2500);
     }
     public void mostrarTela(){
-        Intent intent = new Intent(this, MainActivity2.class);
+        Intent intent = new Intent(this, Login.class);
         startActivity(intent);
         finish();
     }
