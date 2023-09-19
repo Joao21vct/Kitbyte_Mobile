@@ -101,17 +101,20 @@
                 android:textColor="@color/white" />
 
         </LinearLayout>
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/border"
-        android:onClick="Login"
-        android:text="Entrar"
-        android:textColor="#51ABFF"
-        android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:onClick="Login"
+            android:text="Entrar"
+            android:textColor="#51ABFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp" />
 </LinearLayout>
     </LinearLayout>
 
