@@ -47,7 +47,10 @@ public class Login extends AppCompatActivity {
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                 if (response.isSuccessful()) {
                     boolean apiResponse = response.body();
-                    Log.i("Response", String.valueOf(apiResponse));
+                    if(apiResponse){
+                        Intent intent = new Intent(Login.this, Home.class);
+                        startActivity(intent);
+                    }
 
                 } else {
                     Log.e("NetworkError", "Erro na chamada de rede: " + response.code());
