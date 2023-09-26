@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#2880F2"> <!-- Define a cor de fundo -->
+
+    <!-- Botão Home com ícone -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home" /> <!-- Substitua ic_home pelo seu ícone -->
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2880F2"
+            android:text="Home" />
+    </LinearLayout>
+
+    <!-- Botão Aulas com ícone -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_aulas" /> &lt;!&ndash; Substitua ic_aulas pelo seu ícone &ndash;&gt;-->
+
+        <Button
+            android:id="@+id/btnAulas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2880F2"
+            android:text="Aulas" />
+    </LinearLayout>
+
+    <!-- Botão Exercícios com ícone -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_exercicios" /> <!-- Substitua ic_exercicios pelo seu ícone -->
+
+        <Button
+            android:id="@+id/btnExercicios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2880F2"
+            android:text="Exercícios" />
+    </LinearLayout>
+
+    <!-- Botão Ranking com ícone -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_ranking" /> <!-- Substitua ic_ranking pelo seu ícone -->
+
+        <Button
+            android:id="@+id/btnRanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2880F2"
+            android:text="Ranking" />
+    </LinearLayout>
+</LinearLayout>

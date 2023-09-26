@@ -7,7 +7,7 @@
     android:background="#ffffff"
     android:backgroundTint="#D9D9D9"
     android:orientation="vertical"
-    tools:context=".Login">
+    tools:context=".MainActivity2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                 android:onClick="Register"
                 android:text="@string/clique"
                 android:textColor="@color/white" />
-    </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -101,20 +101,16 @@
                 android:textColor="@color/white" />
 
         </LinearLayout>
-
         <Button
             android:id="@+id/button3"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
-            android:background="#ffffff"
+            android:background="@drawable/border"
             android:onClick="Login"
             android:text="Entrar"
             android:textColor="#51ABFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:cornerRadius="30dp" />
-</LinearLayout>
+            android:textStyle="bold" />
     </LinearLayout>
-
+</LinearLayout>
