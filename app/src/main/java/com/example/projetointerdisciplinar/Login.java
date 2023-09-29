@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
         EditText editPassword = findViewById(R.id.editTextTextPassword3);
         String senha = editPassword.getText().toString();
 
-        Call<Boolean> call = apiService.getAllUsers(email, senha);
+        Call<Boolean> call = apiService.verifyAccount(email, senha);
 
         call.enqueue(new Callback<Boolean>() {
             @Override
@@ -48,7 +48,8 @@ public class Login extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     boolean apiResponse = response.body();
                     if(apiResponse){
-                        Intent intent = new Intent(Login.this, Home.class);
+                        Intent intent = new Intent(Login.this, Perfil.class);
+                        intent.putExtra("email", email);
                         startActivity(intent);
                     }
 
