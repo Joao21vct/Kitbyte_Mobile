@@ -14,10 +14,10 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_home" /> <!-- Substitua ic_home pelo seu ícone -->
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_home" /> &lt;!&ndash; Substitua ic_home pelo seu ícone &ndash;&gt;-->
 
         <Button
             android:id="@+id/btnHome"
@@ -56,10 +56,10 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_exercicios" /> <!-- Substitua ic_exercicios pelo seu ícone -->
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_exercicios" /> &lt;!&ndash; Substitua ic_exercicios pelo seu ícone &ndash;&gt;-->
 
         <Button
             android:id="@+id/btnExercicios"
@@ -77,10 +77,10 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_ranking" /> <!-- Substitua ic_ranking pelo seu ícone -->
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_ranking" /> &lt;!&ndash; Substitua ic_ranking pelo seu ícone &ndash;&gt;-->
 
         <Button
             android:id="@+id/btnRanking"
