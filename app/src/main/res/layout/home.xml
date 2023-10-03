@@ -22,7 +22,7 @@
             android:drawablePadding="8dp"
             android:ems="10"
             android:hint="Senha"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:padding="5dp"
             android:paddingStart="30px"
             android:textColorHint="#286BF2" />
