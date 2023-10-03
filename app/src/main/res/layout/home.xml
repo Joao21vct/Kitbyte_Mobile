@@ -8,24 +8,51 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="68dp"
+        android:background="#2880F2"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/editTextTextPassword3"
-            android:layout_width="260dp"
+            android:layout_width="290dp"
             android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1dp"
             android:background="@drawable/border"
-            android:drawableStart="@drawable/password"
+            android:drawableStart="@drawable/buscar"
             android:drawablePadding="8dp"
             android:ems="10"
-            android:hint="Senha"
+            android:hint="Buscar"
             android:inputType="text"
             android:padding="5dp"
             android:paddingStart="30px"
-            android:textColorHint="#286BF2" />
+            android:textColorHint="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:onClick="entrarPerfil"
+                android:src="@drawable/perfilimg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="Perfil"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <TextView

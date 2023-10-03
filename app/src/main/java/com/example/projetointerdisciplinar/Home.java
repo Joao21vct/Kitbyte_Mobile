@@ -55,4 +55,13 @@ public class Home extends AppCompatActivity {
         });
 
     }
+
+    public void entrarPerfil(View view) {
+        Intent intent = new Intent(this, Perfil.class);
+        Intent inte = getIntent();
+        String email = inte.getStringExtra("email");
+        intent.putExtra("email", email);
+        startActivity(intent);
+        finish();
+    }
 }
