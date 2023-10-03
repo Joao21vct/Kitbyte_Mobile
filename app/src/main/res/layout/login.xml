@@ -98,10 +98,11 @@
                 android:id="@+id/novaSenha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="trocarSenha"
                 android:clickable="true"
+                android:onClick="trocarSenha"
                 android:text="@string/esqueci"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
         </LinearLayout>
         <Button
