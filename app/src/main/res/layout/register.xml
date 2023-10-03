@@ -4,12 +4,186 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register" >
+    android:background="@color/black"
+    android:backgroundTint="#2880F2"
+    android:orientation="vertical"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastro:"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="Insira seu nome:"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress3"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border"
+        android:drawableStart="@drawable/email"
+        android:drawablePadding="8dp"
+        android:ems="20"
+        android:hint="Nome"
+        android:inputType="textEmailAddress"
+        android:paddingStart="30px"
+        android:textColorHint="#286BF2" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Tela de registro " />
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="12dp"
+        android:text="Insira seu nome de usuário:"
+        android:layout_marginLeft="70dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editTextTextPassword3"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Nome de usuário"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:paddingStart="30px"
+        android:textColorHint="#286BF2" />
+    <TextView
+        android:id="@+id/textView433"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:text="Insira seu email:"
+        android:layout_marginLeft="70dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editTextTextPassword311"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:paddingStart="30px"
+        android:textColorHint="#286BF2" />
+
+    <TextView
+        android:id="@+id/textView422"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:text="Insira sua data de nascimento:"
+        android:layout_marginLeft="70dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editTextTextPassword333"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="DD/MM/YYYY"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:paddingStart="30px"
+        android:textColorHint="#286BF2" />
+
+    <TextView
+        android:id="@+id/textView455"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="12dp"
+        android:text="Insira sua senha:"
+        android:layout_marginLeft="70dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editTextTextPassword366"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:paddingStart="30px"
+        android:textColorHint="#286BF2" />
+
+    <TextView
+        android:id="@+id/textView477"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:text="Confirme sua senha:"
+        android:layout_marginLeft="70dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editTextTextPassword323"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Confirmar senha"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:paddingStart="30px"
+        android:textColorHint="#286BF2" />
+
+    <Button
+        android:id="@+id/cadastro"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border"
+        android:onClick="Cadastrar"
+        android:text="Cadastrar"
+        android:textAllCaps="false"
+        android:textColor="#51ABFF"
+        android:textStyle="bold" />
 </LinearLayout>

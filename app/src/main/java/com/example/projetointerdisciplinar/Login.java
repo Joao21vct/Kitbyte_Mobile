@@ -48,7 +48,7 @@ public class Login extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     boolean apiResponse = response.body();
                     if(apiResponse){
-                        Intent intent = new Intent(Login.this, Perfil.class);
+                        Intent intent = new Intent(Login.this, Home.class);
                         intent.putExtra("email", email);
                         startActivity(intent);
                     }
@@ -67,6 +67,12 @@ public class Login extends AppCompatActivity {
 
     public void Register(View view) {
         Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void trocarSenha(View view) {
+        Intent intent = new Intent(this, RedefinirSenha.class);
         startActivity(intent);
         finish();
     }

@@ -76,12 +76,13 @@
                 android:textColor="@color/white" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/rSenha"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginStart="4dp"
                 android:gravity="center"
                 android:onClick="Register"
+                android:clickable="true"
                 android:text="@string/clique"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -94,9 +95,11 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/novaSenha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="trocarSenha"
+                android:clickable="true"
                 android:text="@string/esqueci"
                 android:textColor="@color/white" />
 

@@ -2,7 +2,13 @@ package com.example.projetointerdisciplinar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
 
 public class Home extends AppCompatActivity {
 
@@ -10,5 +16,43 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+
+//        View vi = (View) findViewById(R.id.footer).findViewById(R.id.btnRanking);
+//
+//        vi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(Home.this, "AULAS interno rank", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+        ImageButton btranking = findViewById(R.id.btnRanking);
+        ImageButton btaulas = findViewById(R.id.btnAulas);
+        ImageButton btexercicios = findViewById(R.id.btnExercicios);
+        btranking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Toast.makeText(Home.this, "AULAS ok RANK ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Home.this, Ranking.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btaulas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, Aulas.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btexercicios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, Tarefas.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }

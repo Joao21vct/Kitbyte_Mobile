@@ -8,13 +8,22 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/kitlogo"
+        android:label="KitByte"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoInterdisciplinar"
         tools:targetApi="31">
         <activity
-            android:name=".RedefinirSenha"
+            android:name=".Aulas"
+            android:exported="false" />
+        <activity
+            android:name=".Tarefas"
+            android:exported="false" />
+        <activity
+            android:name=".Ranking"
+            android:exported="false" />
+        <activity
+            android:name=".Perfil"
             android:exported="false" />
         <activity
             android:name=".Login"
@@ -29,14 +38,13 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".Perfil"
+            android:name=".RedefinirSenha"
             android:exported="false" />
         <activity
             android:name=".Loading"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
