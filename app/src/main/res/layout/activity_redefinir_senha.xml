@@ -107,7 +107,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@drawable/border"
-            android:onClick="Login"
+            android:onClick="resetPassword"
             android:text="Redefinir"
             android:textAllCaps="false"
             android:textColor="#51ABFF"
