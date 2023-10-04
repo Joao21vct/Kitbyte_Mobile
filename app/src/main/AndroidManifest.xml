@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoInterdisciplinar"
         tools:targetApi="31">
+        <activity
+            android:name=".Loading"
+            android:exported="false" />
+        <activity
+            android:name=".Assinatura"
+            android:exported="false" />
         <activity
             android:name=".Aulas"
             android:exported="false" />
@@ -41,10 +53,11 @@
             android:name=".RedefinirSenha"
             android:exported="false" />
         <activity
-            android:name=".Loading"
+            android:name=".EscolherFoto"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

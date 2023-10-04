@@ -175,7 +175,7 @@
         android:textColorHint="#286BF2" />
 
     <Button
-        android:id="@+id/cadastro"
+        android:id="@+id/assinar"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

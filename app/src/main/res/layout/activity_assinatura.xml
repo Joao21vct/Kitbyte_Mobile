@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Assinatura">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="#2880F2"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/kitlogo" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Nos ajude a manter o aplicativo e ainda receba vários beneficios!"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="- Desbloqueio de  anúncios"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="26dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="260dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="- Desbloqueio de novos conteúdos"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="26dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="- Ganhe o dobro de pontos no ranking"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="26dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#2880F2"
+        android:text="R$14,90 mensal"
+        android:textAllCaps="false"
+        android:textSize="26dp" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#2880F2"
+        android:text="R$159,90 anual"
+        android:textAllCaps="false"
+        android:textSize="26dp" />
+    <include layout="@layout/menu_foooter"
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</LinearLayout>

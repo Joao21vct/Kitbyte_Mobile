@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,56 @@ public class Perfil extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+
+        ImageButton btHome = findViewById(R.id.btnHome);
+        ImageButton btaulas = findViewById(R.id.btnAulas);
+        ImageButton btTarefas = findViewById(R.id.btnExercicios);
+        ImageButton btRanking = findViewById(R.id.btnRanking);
+
+        btHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Perfil.this, Home.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btaulas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Perfil.this, Aulas.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btTarefas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Perfil.this, Tarefas.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btRanking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Perfil.this, Ranking.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        TextView trocarImg = findViewById(R.id.trocarFoto);
+        trocarImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Perfil.this, EscolherFoto.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
         TextView nome = findViewById(R.id.textView8);
         TextView usuario = findViewById(R.id.textView10);
@@ -60,5 +111,11 @@ public class Perfil extends AppCompatActivity {
                 Log.e("NetworkError", "Erro na chamada de rede: " + t.getMessage());
             }
         });
+    }
+
+    public void fazerAssinatura(View view) {
+        Intent intent = new Intent(this, Assinatura.class);
+        startActivity(intent);
+        finish();
     }
 }
