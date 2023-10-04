@@ -180,10 +180,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:background="@drawable/border"
+        android:backgroundTint="#ffffff"
         android:onClick="Cadastrar"
         android:text="Cadastrar"
         android:textAllCaps="false"
         android:textColor="#51ABFF"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:cornerRadius="50dp" />
 </LinearLayout>

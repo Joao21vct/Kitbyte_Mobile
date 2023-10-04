@@ -75,18 +75,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Não possui uma conta?"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/rSenha"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginStart="4dp"
+                android:clickable="true"
                 android:gravity="center"
                 android:onClick="Register"
-                android:clickable="true"
                 android:text="@string/clique"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
