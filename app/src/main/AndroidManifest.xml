@@ -20,7 +20,7 @@
         android:theme="@style/Theme.ProjetoInterdisciplinar"
         tools:targetApi="31">
         <activity
-            android:name=".Loading"
+            android:name=".EscolherFoto"
             android:exported="false" />
         <activity
             android:name=".Assinatura"
@@ -53,7 +53,7 @@
             android:name=".RedefinirSenha"
             android:exported="false" />
         <activity
-            android:name=".EscolherFoto"
+            android:name=".Loading"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

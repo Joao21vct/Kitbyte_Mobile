@@ -105,6 +105,7 @@
                 android:textSize="16sp" />
 
         </LinearLayout>
+
         <Button
             android:id="@+id/button3"
             android:layout_width="130dp"
@@ -114,6 +115,7 @@
             android:background="@drawable/border"
             android:onClick="Login"
             android:text="Entrar"
+            android:textAllCaps="false"
             android:textColor="#51ABFF"
             android:textStyle="bold" />
     </LinearLayout>
