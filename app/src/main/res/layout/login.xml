@@ -43,6 +43,7 @@
             android:hint="E-mail"
             android:inputType="textEmailAddress"
             android:paddingStart="30px"
+            android:textColor="#000000"
             android:textColorHint="#286BF2" />
 
         <EditText
@@ -59,6 +60,7 @@
             android:inputType="textPassword"
             android:padding="5dp"
             android:paddingStart="30px"
+            android:textColor="#000000"
             android:textColorHint="#286BF2" />
 
         <LinearLayout
@@ -112,11 +114,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
-            android:background="@drawable/border"
+            android:backgroundTint="#ffffff"
             android:onClick="Login"
             android:text="Entrar"
             android:textAllCaps="false"
             android:textColor="#51ABFF"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:cornerRadius="50dp" />
     </LinearLayout>
 </LinearLayout>
