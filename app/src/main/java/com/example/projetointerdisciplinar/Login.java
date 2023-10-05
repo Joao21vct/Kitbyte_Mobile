@@ -68,12 +68,10 @@ public class Login extends AppCompatActivity {
     public void Register(View view) {
         Intent intent = new Intent(this, Register.class);
         startActivity(intent);
-        finish();
     }
 
     public void trocarSenha(View view) {
         Intent intent = new Intent(this, RedefinirSenha.class);
         startActivity(intent);
-        finish();
     }
 }
