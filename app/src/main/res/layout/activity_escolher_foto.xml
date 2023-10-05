@@ -25,8 +25,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="280dp"
         android:layout_height="280dp"
-        android:backgroundTint="#2880F2"
-        app:cardCornerRadius="100dp"
+        app:cardCornerRadius="120dp"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,7 +38,7 @@
             android:id="@+id/verImg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/fotoperfil" />
+            app:srcCompat="@drawable/semfoto" />
     </androidx.cardview.widget.CardView>
 
     <ImageButton
