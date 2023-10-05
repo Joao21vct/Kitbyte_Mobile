@@ -21,6 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Register extends AppCompatActivity {
     private static final String BASE_URL = "https://api-interdisciplinar.onrender.com";
+    Usuario emailExiste;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,33 +47,50 @@ public class Register extends AppCompatActivity {
         String senha = editSenha.getText().toString();
         EditText editConfirmSenha = findViewById(R.id.editTextTextPassword323);
         String confirmSenha = editConfirmSenha.getText().toString();
-        // implementar verificação se o email existe
-
-        if (senha.equals(confirmSenha)){
-            Map<String, String> hashMap = new HashMap<>();
-            hashMap.put("nome_real", nome);
-            hashMap.put("nome_usuario", usuario);
-            hashMap.put("email", email);
-            hashMap.put("nascimento", nascimento);
-            hashMap.put("senha", senha);
-            Call<Usuario> call = apiService.registerUser((HashMap) hashMap);
-            call.enqueue(new Callback<Usuario>() {
-                @Override
-                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                    if (response.isSuccessful()) {
-                        Intent intent = new Intent(Register.this, Login.class);
-                        startActivity(intent);
-                    } else {
-                        Log.e("NetworkError", "Erro na chamada de rede: " + response.code());
+        Call<Usuario> call1 = apiService.verifyEmailExists(email);
+        call1.enqueue(new Callback<Usuario>() {
+            @Override
+            public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                if (response.isSuccessful()) {
+                    emailExiste = response.body();
+                } else {
+                    Log.e("NetworkError", "Erro na chamada de rede: " + response.code());
+                }
+            }
+            @Override
+            public void onFailure(Call<Usuario> call, Throwable t) {
+                Log.e("NetworkError", "Erro na chamada de rede: " + t.getMessage());
+            }
+        });
+        if(emailExiste != null){
+            if (senha.equals(confirmSenha)){
+                Map<String, String> hashMap = new HashMap<>();
+                hashMap.put("nome_real", nome);
+                hashMap.put("nome_usuario", usuario);
+                hashMap.put("email", email);
+                hashMap.put("nascimento", nascimento);
+                hashMap.put("senha", senha);
+                Call<Usuario> call = apiService.registerUser((HashMap) hashMap);
+                call.enqueue(new Callback<Usuario>() {
+                    @Override
+                    public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                        if (response.isSuccessful()) {
+                            Intent intent = new Intent(Register.this, Login.class);
+                            startActivity(intent);
+                        } else {
+                            Log.e("NetworkError", "Erro na chamada de rede: " + response.code());
+                        }
                     }
-                }
-                @Override
-                public void onFailure(Call<Usuario> call, Throwable t) {
-                    Log.e("NetworkError", "Erro na chamada de rede: " + t.getMessage());
-                }
-            });
+                    @Override
+                    public void onFailure(Call<Usuario> call, Throwable t) {
+                        Log.e("NetworkError", "Erro na chamada de rede: " + t.getMessage());
+                    }
+                });
+            } else{
+                Toast.makeText(this, "Campos de senha e confirmação de senha estão diferentes", Toast.LENGTH_LONG).show();
+            }
         } else{
-            Toast.makeText(this, "Campos de senha e confirmação de senha estão diferentes", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Email já cadastrado em nosso aplicativo", Toast.LENGTH_LONG).show();
         }
 
 

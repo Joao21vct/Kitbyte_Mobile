@@ -97,8 +97,18 @@ public class Usuario {
         this.fk_plano_id = fk_plano_id;
     }
 
-    public Usuario() {
+    public Usuario(Usuario usuario) {
+        this.id = usuario.getId();
+        this.data_nascimento = usuario.getData_nascimento();
+        this.senha = usuario.getSenha();
+        this.pontos = usuario.getPontos();
+        this.nome_usuario = usuario.getNome_usuario();
+        this.nome_real = usuario.getNome_real();
+        this.num_kitcoins = usuario.getNum_kitcoins();
+        this.email = usuario.getEmail();
+        this.fk_plano_id = usuario.getFk_plano_id();
     }
+
 
     @Override
     public String toString() {

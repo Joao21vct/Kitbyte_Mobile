@@ -19,4 +19,6 @@ public interface ApiService {
 
     @POST("api/user/insert")
     Call<Usuario> registerUser(@Body HashMap user);
+    @GET("api/user/email")
+    Call<Usuario> verifyEmailExists(@Query("email") String email);
 }
