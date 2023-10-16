@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -75,6 +77,8 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                         if (response.isSuccessful()) {
+                            Logger log = new Logger("Registro", email);
+                            log.generateLog("Acesso");
                             Intent intent = new Intent(Register.this, Login.class);
                             startActivity(intent);
                         } else {
