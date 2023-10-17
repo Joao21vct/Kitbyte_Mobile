@@ -8,10 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.Date;
+import java.util.UUID;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -48,6 +46,8 @@ public class Login extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     boolean apiResponse = response.body();
                     if(apiResponse){
+                        Logger log = new Logger("Login", email);
+                        log.generateLog("Acesso");
                         Intent intent = new Intent(Login.this, Home.class);
                         intent.putExtra("email", email);
                         startActivity(intent);
