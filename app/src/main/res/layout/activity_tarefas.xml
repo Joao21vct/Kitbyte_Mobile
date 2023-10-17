@@ -6,18 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Tarefas">
 
-    <TextView
-        android:id="@+id/textView244"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="tarefas"
-        android:textSize="36sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/textView244"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="tarefas"-->
+<!--        android:textSize="36sp" />-->
 
-<!--    <WebView-->
-<!--        android:id="@+id/webTarefa"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_above="@+id/footer" />-->
+    <WebView
+        android:id="@+id/webTarefa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer" />
 
     <include layout="@layout/menu_foooter"
         android:id="@+id/footer"

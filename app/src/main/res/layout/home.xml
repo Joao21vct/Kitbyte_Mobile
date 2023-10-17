@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
+    <WebView
+        android:id="@+id/webHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="68dp"
@@ -56,19 +62,13 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView233"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300sp"
-        android:text="home"
-        android:textSize="36sp" />
-
-<!--    <WebView-->
-<!--        android:id="@+id/webHome"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_above="@+id/footer" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView233"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="300sp"-->
+<!--        android:text="home"-->
+<!--        android:textSize="36sp" />-->
 
     <include layout="@layout/menu_foooter"
         android:id="@+id/footer"
