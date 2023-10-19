@@ -74,6 +74,7 @@
         android:layout_marginTop="71dp"
         android:layout_marginBottom="168dp"
         android:backgroundTint="#ffffff"
+        android:onClick="salvarFoto"
         android:text="Salvar Foto"
         android:textAllCaps="false"
         android:textColor="#2880F2"

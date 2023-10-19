@@ -7,20 +7,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.util.Base64;
+import android.util.Log; // Importe a classe Log para uso no logcat
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 public class EscolherFoto extends AppCompatActivity {
     ImageView verImagem;
     private int rotationAngle = 90;
     private int rotationAngle2 = 270;
+
+    private String imagemBase64 = null; // Variável para armazenar a imagem como string base64
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +60,9 @@ public class EscolherFoto extends AppCompatActivity {
             imagemBitmap = rotateBitmap(imagemBitmap, rotationAngle);
 
             verImagem.setImageBitmap(imagemBitmap);
+
+            // Converter a imagem em uma string base64 e armazená-la na variável imagemBase64
+            imagemBase64 = bitmapToBase64(imagemBitmap);
         }
     });
 
@@ -69,14 +76,26 @@ public class EscolherFoto extends AppCompatActivity {
                 imagemBitmap = rotateBitmap2(imagemBitmap, rotationAngle2);
 
                 verImagem.setImageBitmap(imagemBitmap);
+
+                // Converter a imagem em uma string base64 e armazená-la na variável imagemBase64
+                imagemBase64 = bitmapToBase64(imagemBitmap);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
         }
     });
 
-    public void voltar(View view) {
+    public void salvarFoto(View view) {
+        // Verifique se há uma imagem para salvar
+        if (imagemBase64 != null) {
+            // Faça o que quiser com a imagem base64, como salvar em um banco de dados, enviar para um servidor, etc.
+            // Neste exemplo, apenas exibiremos no logcat.
+            Log.d("Imagem Base64", imagemBase64);
+        } else {
+            // Trate o caso em que nenhuma imagem foi selecionada
+        }
+
+        // Retorne para a tela de perfil ou faça outras ações necessárias
         Intent intent = new Intent(this, Perfil.class);
         startActivity(intent);
         finish();
@@ -93,4 +112,10 @@ public class EscolherFoto extends AppCompatActivity {
         return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
     }
 
+    public String bitmapToBase64(Bitmap bitmap) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+        byte[] byteArray = byteArrayOutputStream.toByteArray();
+        return Base64.encodeToString(byteArray, Base64.DEFAULT);
+    }
 }
