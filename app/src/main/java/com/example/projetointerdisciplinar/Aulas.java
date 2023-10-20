@@ -24,7 +24,7 @@ public class Aulas extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webView.loadUrl("https://kitbyte-frontend.onrender.com/courses");
+        webView.loadUrl("https://inter-7550.onrender.com/courses");
 
         ImageButton btHome = findViewById(R.id.btnHome);
         ImageButton btTarefas = findViewById(R.id.btnExercicios);
