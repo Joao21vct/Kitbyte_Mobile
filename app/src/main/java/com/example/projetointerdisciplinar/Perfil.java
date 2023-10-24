@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,6 +71,9 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Perfil.this, EscolherFoto.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -82,6 +86,7 @@ public class Perfil extends AppCompatActivity {
         TextView campoEmail = findViewById(R.id.textView11);
         TextView senha = findViewById(R.id.textView14);
         TextView data_nasc = findViewById(R.id.textView16);
+        ImageView foto = findViewById(R.id.imageView5);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -102,6 +107,7 @@ public class Perfil extends AppCompatActivity {
                     campoEmail.setText(apiResponse.getEmail());
                     senha.setText(apiResponse.getSenha());
                     data_nasc.setText(formatter.format(apiResponse.getData_nascimento()));
+                    //variavel foto precisa receber a imagem do banco em 64, desencripta-la e carregar para o usuario
                 } else {
                     Log.e("NetworkError", "Erro na chamada de rede2: " + response.code());
                 }

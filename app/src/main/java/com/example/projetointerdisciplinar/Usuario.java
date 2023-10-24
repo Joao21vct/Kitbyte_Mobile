@@ -12,6 +12,7 @@ public class Usuario {
     private int num_kitcoins;
     private String email;
     private int fk_plano_id;
+    private String foto_perfil;
 
     public int getId() {
         return id;
@@ -19,6 +20,14 @@ public class Usuario {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getFoto_perfil() {
+        return foto_perfil;
+    }
+
+    public void setFoto_perfil(String foto_perfil) {
+        this.foto_perfil = foto_perfil;
     }
 
     public Date getData_nascimento() {
@@ -85,7 +94,7 @@ public class Usuario {
         this.fk_plano_id = fk_plano_id;
     }
 
-    public Usuario(int id, Date data_nascimento, String senha, int pontos, String nome_usuario, String nome_real, int num_kitcoins, String email, int fk_plano_id) {
+    public Usuario(int id, Date data_nascimento, String senha, int pontos, String nome_usuario, String nome_real, int num_kitcoins, String email, int fk_plano_id, String foto_perfil) {
         this.id = id;
         this.data_nascimento = data_nascimento;
         this.senha = senha;
@@ -95,6 +104,7 @@ public class Usuario {
         this.num_kitcoins = num_kitcoins;
         this.email = email;
         this.fk_plano_id = fk_plano_id;
+        this.foto_perfil = foto_perfil;
     }
 
     public Usuario(Usuario usuario) {
@@ -107,6 +117,7 @@ public class Usuario {
         this.num_kitcoins = usuario.getNum_kitcoins();
         this.email = usuario.getEmail();
         this.fk_plano_id = usuario.getFk_plano_id();
+        this.foto_perfil = usuario.getFoto_perfil();
     }
 
 
@@ -122,6 +133,7 @@ public class Usuario {
                 ", num_kitcoins=" + num_kitcoins +
                 ", email='" + email + '\'' +
                 ", fk_plano_id=" + fk_plano_id +
+                ", foto_perfil='" + foto_perfil + '\'' +
                 '}';
     }
 }

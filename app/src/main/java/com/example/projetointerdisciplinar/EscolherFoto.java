@@ -19,8 +19,15 @@ import android.util.Log; // Importe a classe Log para uso no logcat
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class EscolherFoto extends AppCompatActivity {
     ImageView verImagem;
+    private static final String BASE_URL = "https://api-interdisciplinar.onrender.com";
     private int rotationAngle = 90;
     private int rotationAngle2 = 270;
 
@@ -86,11 +93,29 @@ public class EscolherFoto extends AppCompatActivity {
     });
 
     public void salvarFoto(View view) {
-        // Verifique se há uma imagem para salvar
         if (imagemBase64 != null) {
-            // Faça o que quiser com a imagem base64, como salvar em um banco de dados, enviar para um servidor, etc.
-            // Neste exemplo, apenas exibiremos no logcat.
-            Log.d("Imagem Base64", imagemBase64);
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            ApiService apiService = retrofit.create(ApiService.class);
+            Intent intent = getIntent();
+            String email = intent.getStringExtra("email");
+            Call<String> call = apiService.fidalgo(email, imagemBase64);
+            call.enqueue(new Callback<String>() {
+                @Override
+                public void onResponse(Call<String> call, Response<String> response) {
+                    if (response.isSuccessful()) {
+                        Log.e("Foto", "Foto salva com succeso");
+                    } else {
+                        Log.e("NetworkError", "Erro na chamada de rede2 foto : " + response.code());
+                    }
+                }
+                @Override
+                public void onFailure(Call<String> call, Throwable t) {
+                    Log.e("NetworkError", "Erro na chamada de rede: " + t.getMessage());
+                }
+            });
         } else {
             // Trate o caso em que nenhuma imagem foi selecionada
         }
