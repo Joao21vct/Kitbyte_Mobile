@@ -22,7 +22,7 @@ public class Tarefas extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webView.loadUrl("https://inter-7550.onrender.com/exercises");
+        webView.loadUrl("https://interkitbyte.onrender.com/exercises");
 
         ImageButton btHome = findViewById(R.id.btnHome);
         ImageButton btaulas = findViewById(R.id.btnAulas);
