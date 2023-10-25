@@ -107,6 +107,7 @@ public class Perfil extends AppCompatActivity {
                     campoEmail.setText(apiResponse.getEmail());
                     senha.setText(apiResponse.getSenha());
                     data_nasc.setText(formatter.format(apiResponse.getData_nascimento()));
+                    //
                     //variavel foto precisa receber a imagem do banco em 64, desencripta-la e carregar para o usuario
                 } else {
                     Log.e("NetworkError", "Erro na chamada de rede2: " + response.code());
