@@ -118,4 +118,9 @@ public class Perfil extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+//    public Bitmap base64ToBitmap(String base64String) {
+//        byte[] decodedBytes = Base64.decode(base64String, Base64.DEFAULT);
+//        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+//    }
 }
