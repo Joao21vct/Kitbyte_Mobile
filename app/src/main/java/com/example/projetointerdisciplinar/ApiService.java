@@ -6,6 +6,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.PATCH;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Query;
 public interface ApiService {
     @GET("api/user/verifyaccount")
@@ -21,4 +22,6 @@ public interface ApiService {
     Call<Usuario> registerUser(@Body HashMap user);
     @GET("api/user/email")
     Call<Usuario> verifyEmailExists(@Query("email") String email);
+    @PATCH("api/user/foto")
+    Call<String> fidalgo(@Query("email") String email, @Query("imagem") String imagem);
 }
