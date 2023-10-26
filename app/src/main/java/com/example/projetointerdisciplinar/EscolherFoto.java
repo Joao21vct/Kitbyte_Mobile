@@ -122,6 +122,9 @@ public class EscolherFoto extends AppCompatActivity {
 
         // Retorne para a tela de perfil ou faça outras ações necessárias
         Intent intent = new Intent(this, Perfil.class);
+        Intent inte = getIntent();
+        String email = inte.getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
         finish();
     }
@@ -142,5 +145,14 @@ public class EscolherFoto extends AppCompatActivity {
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
         byte[] byteArray = byteArrayOutputStream.toByteArray();
         return Base64.encodeToString(byteArray, Base64.DEFAULT);
+    }
+
+    public void voltar(View view) {
+        Intent intent = new Intent(this, Perfil.class);
+        Intent inte = getIntent();
+        String email = inte.getStringExtra("email");
+        intent.putExtra("email", email);
+        startActivity(intent);
+        finish();
     }
 }
