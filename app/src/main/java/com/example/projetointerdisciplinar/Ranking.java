@@ -24,7 +24,7 @@ public class Ranking extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webView.loadUrl("https://interkitbyte.onrender.com/ranking");
+        webView.loadUrl("https://inter-7550.onrender.com/ranking");
 
         ImageButton btHome = findViewById(R.id.btnHome);
         ImageButton btaulas = findViewById(R.id.btnAulas);

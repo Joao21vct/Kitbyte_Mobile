@@ -3,7 +3,10 @@ package com.example.projetointerdisciplinar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -107,8 +110,9 @@ public class Perfil extends AppCompatActivity {
                     campoEmail.setText(apiResponse.getEmail());
                     senha.setText(apiResponse.getSenha());
                     data_nasc.setText(formatter.format(apiResponse.getData_nascimento()));
-                    //
-                    //variavel foto precisa receber a imagem do banco em 64, desencripta-la e carregar para o usuario
+                    foto.setImageBitmap(base64ToBitmap(apiResponse.getFoto_perfil()));
+                    //foto.setImageBitmap(apiResponse.getFoto_perfil());
+
                 } else {
                     Log.e("NetworkError", "Erro na chamada de rede2: " + response.code());
                 }
@@ -126,8 +130,8 @@ public class Perfil extends AppCompatActivity {
         finish();
     }
 
-//    public Bitmap base64ToBitmap(String base64String) {
-//        byte[] decodedBytes = Base64.decode(base64String, Base64.DEFAULT);
-//        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
-//    }
+    public Bitmap base64ToBitmap(String base64String) {
+        byte[] decodedBytes = Base64.decode(base64String, Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+    }
 }
