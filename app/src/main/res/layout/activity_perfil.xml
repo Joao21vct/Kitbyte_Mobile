@@ -28,7 +28,7 @@ tools:context=".Perfil">
                 android:layout_width="240dp"
                 android:layout_height="240dp"
                 android:layout_gravity="center_horizontal"
-                app:cardCornerRadius="120dp"
+                app:cardCornerRadius="90dp"
                 app:cardElevation="4dp"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -205,6 +205,7 @@ tools:context=".Perfil">
             android:text="Assinatura"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
+            android:textSize="18dp"
             app:cornerRadius="50dp"
             tools:ignore="OnClick" />
 

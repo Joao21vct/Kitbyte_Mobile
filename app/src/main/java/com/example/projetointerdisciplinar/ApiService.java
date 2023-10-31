@@ -23,5 +23,5 @@ public interface ApiService {
     @GET("api/user/email")
     Call<Usuario> verifyEmailExists(@Query("email") String email);
     @PATCH("api/user/foto")
-    Call<String> fidalgo(@Query("email") String email, @Query("imagem") String imagem);
+    Call<Object> fidalgo(@Body FotoBody body);
 }

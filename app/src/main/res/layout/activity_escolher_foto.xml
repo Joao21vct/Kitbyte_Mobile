@@ -25,7 +25,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="280dp"
         android:layout_height="280dp"
-        app:cardCornerRadius="120dp"
+        app:cardCornerRadius="100dp"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,7 +68,7 @@
         app:srcCompat="@drawable/galeria" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/salvarfoto"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="71dp"
@@ -130,6 +130,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/salvarfoto"
         app:layout_constraintVertical_bias="0.283" />
 </androidx.constraintlayout.widget.ConstraintLayout>

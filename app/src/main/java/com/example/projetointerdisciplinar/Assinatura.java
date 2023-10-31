@@ -23,6 +23,9 @@ public class Assinatura extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Assinatura.this, Home.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -31,6 +34,9 @@ public class Assinatura extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Assinatura.this, Aulas.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -39,6 +45,9 @@ public class Assinatura extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Assinatura.this, Tarefas.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -47,9 +56,21 @@ public class Assinatura extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Assinatura.this, Ranking.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
         });
+    }
+
+    public void voltar(View view) {
+        Intent intent = new Intent(this, Perfil.class);
+        Intent inte = getIntent();
+        String email = inte.getStringExtra("email");
+        intent.putExtra("email", email);
+        startActivity(intent);
+        finish();
     }
 }

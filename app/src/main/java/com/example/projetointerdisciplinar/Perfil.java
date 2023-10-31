@@ -40,6 +40,9 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Perfil.this, Home.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -48,6 +51,9 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Perfil.this, Aulas.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -56,6 +62,9 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Perfil.this, Tarefas.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -64,6 +73,9 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Perfil.this, Ranking.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -111,7 +123,6 @@ public class Perfil extends AppCompatActivity {
                     senha.setText(apiResponse.getSenha());
                     data_nasc.setText(formatter.format(apiResponse.getData_nascimento()));
                     foto.setImageBitmap(base64ToBitmap(apiResponse.getFoto_perfil()));
-                    //foto.setImageBitmap(apiResponse.getFoto_perfil());
 
                 } else {
                     Log.e("NetworkError", "Erro na chamada de rede2: " + response.code());
@@ -126,12 +137,19 @@ public class Perfil extends AppCompatActivity {
 
     public void fazerAssinatura(View view) {
         Intent intent = new Intent(this, Assinatura.class);
+        Intent inte = getIntent();
+        String email = inte.getStringExtra("email");
+        intent.putExtra("email", email);
         startActivity(intent);
         finish();
     }
 
     public Bitmap base64ToBitmap(String base64String) {
-        byte[] decodedBytes = Base64.decode(base64String, Base64.DEFAULT);
-        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+        if(base64String == null){
+            return null;
+        }else{
+            byte[] decodedBytes = Base64.decode(base64String, Base64.DEFAULT);
+            return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+        }
     }
 }

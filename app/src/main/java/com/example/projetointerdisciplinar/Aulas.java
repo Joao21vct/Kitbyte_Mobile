@@ -33,7 +33,10 @@ public class Aulas extends AppCompatActivity {
         btHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                  Intent intent = new Intent(Aulas.this, Home.class);
+                Intent intent = new Intent(Aulas.this, Home.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -42,6 +45,9 @@ public class Aulas extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Aulas.this, Tarefas.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -50,6 +56,9 @@ public class Aulas extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Aulas.this, Ranking.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }

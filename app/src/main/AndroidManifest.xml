@@ -9,6 +9,7 @@
 
     <uses-feature
         android:name="android.hardware.camera"
+        android:hardwareAccelerated="false"
         android:required="true" />
 
     <application

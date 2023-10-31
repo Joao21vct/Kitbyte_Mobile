@@ -34,6 +34,9 @@ public class Ranking extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Ranking.this, Home.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -42,6 +45,9 @@ public class Ranking extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Ranking.this, Aulas.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -50,6 +56,9 @@ public class Ranking extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Ranking.this, Tarefas.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }

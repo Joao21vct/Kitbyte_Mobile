@@ -1,96 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".Assinatura">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="280dp"
-        android:background="#2880F2"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView6"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="136dp"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/kitlogo" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="300sp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:text="Nos ajude a manter o aplicativo e ainda receba vários beneficios!"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:text="- Desbloqueio de  anúncios"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="26dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="#2880F2"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="260dp"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="- Desbloqueio de novos conteúdos"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="26dp" />
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="136dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/kitlogo" />
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal"
-        android:text="- Ganhe o dobro de pontos no ranking"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="26dp" />
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="Nos ajude a manter o aplicativo e ainda receba vários beneficios!"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#2880F2"
-        android:text="R$14,90 mensal"
-        android:textAllCaps="false"
-        android:textSize="26dp" />
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="- Desbloqueio de anúncios"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="26dp" />
 
-    <Button
-        android:id="@+id/button21"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#2880F2"
-        android:text="R$159,90 anual"
-        android:textAllCaps="false"
-        android:textSize="26dp" />
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="260dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="- Desbloqueio de novos conteúdos"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:text="- Ganhe o dobro de pontos no ranking"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="26dp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#2880F2"
+                android:text="R$14,90 mensal"
+                android:textAllCaps="false"
+                app:cornerRadius="50dp"
+                android:textSize="26dp" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#2880F2"
+                app:cornerRadius="50dp"
+                android:text="R$159,90 anual"
+                android:textAllCaps="false"
+                android:textSize="26dp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#2880F2"
+                android:onClick="voltar"
+                android:text="Voltar"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                app:cornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/salvarfoto"
+                app:layout_constraintVertical_bias="0.283" />
+        </LinearLayout>
+    </ScrollView>
+
     <include layout="@layout/menu_foooter"
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
-</LinearLayout>
+</RelativeLayout>

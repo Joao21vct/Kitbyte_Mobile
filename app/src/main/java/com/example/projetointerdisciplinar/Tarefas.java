@@ -32,6 +32,9 @@ public class Tarefas extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Tarefas.this, Home.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -40,6 +43,9 @@ public class Tarefas extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Tarefas.this, Aulas.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -48,6 +54,9 @@ public class Tarefas extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Tarefas.this, Ranking.class);
+                Intent inte = getIntent();
+                String email = inte.getStringExtra("email");
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
