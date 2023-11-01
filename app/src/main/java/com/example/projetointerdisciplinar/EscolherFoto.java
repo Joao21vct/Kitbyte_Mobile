@@ -113,6 +113,7 @@ public class EscolherFoto extends AppCompatActivity {
                 Bitmap imagemBitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), localImgSelecionada);
 
                 imagemBitmap = rotateBitmap2(imagemBitmap, rotationAngle2);
+                //Diminuindo img
                 imagemBitmap = Bitmap.createScaledBitmap(imagemBitmap,300,300,false);
                 verImagem.setImageBitmap(imagemBitmap);
 
@@ -193,6 +194,7 @@ public class EscolherFoto extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
     public Bitmap base64ToBitmap(String base64String) {
         if(base64String == null){
             return null;
