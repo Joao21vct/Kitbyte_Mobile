@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "70156639005",
+    "firebase_url": "https://bancointerdisciplinar-default-rtdb.firebaseio.com",
+    "project_id": "bancointerdisciplinar",
+    "storage_bucket": "bancointerdisciplinar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70156639005:android:876ddd2e5e8152d8dbdff4",
+        "android_client_info": {
+          "package_name": "com.example.projetointerdisciplinar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEjzjKVHpIMdVyrDV_G96tdzwna_zEH3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

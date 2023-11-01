@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:backgroundTint="#D9D9D9"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2880F2">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/kitlogo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#2880F2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:text="Insira seu email:"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress7"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="8dp"
+            android:ems="20"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:paddingStart="30px"
+            android:textColorHint="#286BF2" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="Redefina sua senha:"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword7"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/password"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="Nova senha"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:paddingStart="30px"
+            android:textColorHint="#286BF2" />
+        <EditText
+            android:id="@+id/editTextTextPassword11"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/password"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="Confirmar senha"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:paddingStart="30px"
+            android:textColorHint="#286BF2" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#ffffff"
+            android:onClick="resetPassword"
+            android:text="Redefinir"
+            android:textAllCaps="false"
+            android:textColor="#51ABFF"
+            android:textStyle="bold"
+            app:cornerRadius="50dp" />
+    </LinearLayout>
+</LinearLayout>
