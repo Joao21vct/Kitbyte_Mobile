@@ -12,6 +12,8 @@ Caso não tenha o Android Studio instalado utilize o link abaixo para instalar:
 https://developer.android.com/studio/install?hl=pt-br
 ```
 
+Projeto criado na versão do android: (2022 1.1 electric android)
+
 ## Instalação
 
 Para a instalação é necessário realizar o download em zip do projeto ou fazer o git clone.
