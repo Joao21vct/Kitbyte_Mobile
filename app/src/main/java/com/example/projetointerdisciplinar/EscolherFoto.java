@@ -98,6 +98,7 @@ public class EscolherFoto extends AppCompatActivity {
 
             imagemBitmap = rotateBitmap(imagemBitmap, rotationAngle);
 
+            imagemBitmap = Bitmap.createScaledBitmap(imagemBitmap,300,300,false);
             verImagem.setImageBitmap(imagemBitmap);
 
             // Converter a imagem em uma string base64 e armazená-la na variável imagemBase64

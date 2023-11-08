@@ -9,8 +9,8 @@ tools:context=".Perfil">
 
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_above="@+id/footer">
+    android:layout_height="match_parent">
+<!--    android:layout_above="@+id/footer">-->
 
     <LinearLayout
         android:id="@+id/contentLayout"
@@ -198,7 +198,6 @@ tools:context=".Perfil">
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
             android:backgroundTint="#2880F2"
             android:clickable="true"
             android:onClick="fazerAssinatura"
@@ -209,13 +208,30 @@ tools:context=".Perfil">
             app:cornerRadius="50dp"
             tools:ignore="OnClick" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#2880F2"
+            android:clickable="true"
+            android:onClick="voltarHome"
+            android:text="Voltar"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            app:cornerRadius="50dp"
+            tools:ignore="OnClick"/>
+
     </LinearLayout>
 </ScrollView>
 
-<include layout="@layout/menu_foooter"
-    android:id="@+id/footer"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true" />
+<!--<include layout="@layout/menu_foooter"-->
+<!--    android:id="@+id/footer"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_alignParentBottom="true" />-->
 
 </RelativeLayout>
