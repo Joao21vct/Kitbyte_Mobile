@@ -26,6 +26,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Perfil extends AppCompatActivity {
+//    Link API
     private static final String BASE_URL = "https://api-interdisciplinar.onrender.com";
 
     @Override
