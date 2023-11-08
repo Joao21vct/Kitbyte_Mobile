@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -31,55 +33,55 @@ public class Perfil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
-        ImageButton btHome = findViewById(R.id.btnHome);
-        ImageButton btaulas = findViewById(R.id.btnAulas);
-        ImageButton btTarefas = findViewById(R.id.btnExercicios);
-        ImageButton btRanking = findViewById(R.id.btnRanking);
-
-        btHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Perfil.this, Home.class);
-                Intent inte = getIntent();
-                String email = inte.getStringExtra("email");
-                intent.putExtra("email", email);
-                startActivity(intent);
-                finish();
-            }
-        });
-        btaulas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Perfil.this, Aulas.class);
-                Intent inte = getIntent();
-                String email = inte.getStringExtra("email");
-                intent.putExtra("email", email);
-                startActivity(intent);
-                finish();
-            }
-        });
-        btTarefas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Perfil.this, Tarefas.class);
-                Intent inte = getIntent();
-                String email = inte.getStringExtra("email");
-                intent.putExtra("email", email);
-                startActivity(intent);
-                finish();
-            }
-        });
-        btRanking.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Perfil.this, Ranking.class);
-                Intent inte = getIntent();
-                String email = inte.getStringExtra("email");
-                intent.putExtra("email", email);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        ImageButton btHome = findViewById(R.id.btnHome);
+//        ImageButton btaulas = findViewById(R.id.btnAulas);
+//        ImageButton btTarefas = findViewById(R.id.btnExercicios);
+//        ImageButton btRanking = findViewById(R.id.btnRanking);
+//
+//        btHome.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Perfil.this, Home.class);
+//                Intent inte = getIntent();
+//                String email = inte.getStringExtra("email");
+//                intent.putExtra("email", email);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
+//        btaulas.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Perfil.this, Aulas.class);
+//                Intent inte = getIntent();
+//                String email = inte.getStringExtra("email");
+//                intent.putExtra("email", email);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
+//        btTarefas.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Perfil.this, Tarefas.class);
+//                Intent inte = getIntent();
+//                String email = inte.getStringExtra("email");
+//                intent.putExtra("email", email);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
+//        btRanking.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Perfil.this, Ranking.class);
+//                Intent inte = getIntent();
+//                String email = inte.getStringExtra("email");
+//                intent.putExtra("email", email);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
 
         TextView trocarImg = findViewById(R.id.trocarFoto);
         trocarImg.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +97,7 @@ public class Perfil extends AppCompatActivity {
         });
 
 
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         TextView nome = findViewById(R.id.textView8);
         TextView usuario = findViewById(R.id.textView10);
         TextView campoEmail = findViewById(R.id.textView11);
@@ -117,11 +119,17 @@ public class Perfil extends AppCompatActivity {
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 if (response.isSuccessful()) {
                     Usuario apiResponse = response.body();
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.setTime(apiResponse.getData_nascimento()); // Suponha que você tenha uma data atual aqui
+                    int horasParaAdicionar = 3;
+                    calendar.add(Calendar.HOUR, horasParaAdicionar);
+                    Date novaData = calendar.getTime();
+
                     nome.setText(apiResponse.getNome_real());
                     usuario.setText(apiResponse.getNome_usuario());
                     campoEmail.setText(apiResponse.getEmail());
                     senha.setText(apiResponse.getSenha());
-                    data_nasc.setText(formatter.format(apiResponse.getData_nascimento()));
+                    data_nasc.setText(formatter.format(novaData));
                     foto.setImageBitmap(base64ToBitmap(apiResponse.getFoto_perfil()));
 
                 } else {
@@ -151,5 +159,14 @@ public class Perfil extends AppCompatActivity {
             byte[] decodedBytes = Base64.decode(base64String, Base64.DEFAULT);
             return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
         }
+    }
+
+    public void voltarHome(View view) {
+        Intent intent = new Intent(this, Home.class);
+        Intent inte = getIntent();
+        String email = inte.getStringExtra("email");
+        intent.putExtra("email", email);
+        startActivity(intent);
+        finish();
     }
 }

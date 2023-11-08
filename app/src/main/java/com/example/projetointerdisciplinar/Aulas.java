@@ -2,9 +2,11 @@ package com.example.projetointerdisciplinar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -14,7 +16,7 @@ import android.widget.Toast;
 public class Aulas extends AppCompatActivity {
 
     private WebView webView;
-
+    @SuppressLint("JavascriptInterface")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,7 @@ public class Aulas extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.loadUrl("https://inter-7550.onrender.com/courses");
+        webView.addJavascriptInterface(this, "Android");
 
         ImageButton btHome = findViewById(R.id.btnHome);
         ImageButton btTarefas = findViewById(R.id.btnExercicios);
@@ -63,5 +66,11 @@ public class Aulas extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    @JavascriptInterface
+    public String parametrosFront(){
+        Intent inte = getIntent();
+        String email = inte.getStringExtra("email");
+        return email;
     }
 }
