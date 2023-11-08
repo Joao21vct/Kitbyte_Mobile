@@ -64,13 +64,13 @@ public class Register extends AppCompatActivity {
                 Log.e("NetworkError", "Erro na chamada de rede: " + t.getMessage());
             }
         });
-        if(emailExiste != null){
+        if(emailExiste == null){
             if (senha.equals(confirmSenha)){
                 Map<String, String> hashMap = new HashMap<>();
                 hashMap.put("nome_real", nome);
                 hashMap.put("nome_usuario", usuario);
                 hashMap.put("email", email);
-                hashMap.put("nascimento", nascimento);
+                hashMap.put("data_nascimento", nascimento);
                 hashMap.put("senha", senha);
                 Call<Usuario> call = apiService.registerUser((HashMap) hashMap);
                 call.enqueue(new Callback<Usuario>() {
