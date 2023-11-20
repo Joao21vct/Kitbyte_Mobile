@@ -38,7 +38,7 @@ public class Home extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 //        webView.loadUrl("https://inter-7550.onrender.com/");
-        webView.loadUrl("https://kitbyte-frontend.onrender.com/");
+        webView.loadUrl("https://kitbytefinal.onrender.com");
         webView.addJavascriptInterface(this, "Android");
 
 //        ImageButton btranking = findViewById(R.id.btnRanking);
